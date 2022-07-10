@@ -1,0 +1,131 @@
+repeat task.wait() until shared.GuiLibrary
+local GuiLibrary = shared.GuiLibrary
+local COB = function(tab, argstable) 
+    return GuiLibrary["ObjectsThatCanBeSaved"][tab.."Window"]["Api"].CreateOptionsButton(argstable)
+end
+
+COB("Utility", {
+    Name = "rektsky",
+    Function = function(callback) 
+        if callback then
+            pcall(function() 
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/8pmX8/rektsky4roblox/main/mainscript.lua"))()
+            end) 
+        end
+    end,
+    HoverText = "loads rektsky"
+})
+
+COB("Utility", {
+    Name = "future",
+    Function = function(callback) 
+        if callback then
+            pcall(function() 
+                loadstring(game:HttpGet('https://raw.githubusercontent.com/joeengo/Future/main/loadstring.lua', true))() 
+            end) 
+        end
+    end,
+    HoverText = "loads future"
+})
+
+COB("World", {
+    Name = "Night",
+    Function = function(v)
+        if v then
+            game.Lighting.TimeOfDay = "00:00:00"
+        else
+            game.Lighting.TimeOfDay = "13:00:00"
+        end
+    end
+})
+
+COB("World", {
+    Name = "Blood",
+    Function = function(v)
+        if v then
+            game.Lighting.Ambient = Color3.fromRGB(255,0,0)
+            game.Lighting.OutdoorAmbient = Color3.fromRGB(0, 0, 0)
+        else
+            game.Lighting.Ambient = Color3.fromRGB(91, 91, 91)
+            game.Lighting.OutdoorAmbient = Color3.fromRGB(201, 201, 201)
+        end
+    end
+})
+
+COB("World", {
+    Name = "Ocean",
+    Function = function(v)
+        if v then
+            game.Lighting.Ambient = Color3.fromRGB(0,0,255)
+            game.Lighting.OutdoorAmbient = Color3.fromRGB(0, 0, 0)
+        else
+            game.Lighting.Ambient = Color3.fromRGB(91, 91, 91)
+            game.Lighting.OutdoorAmbient = Color3.fromRGB(201, 201, 201)
+        end
+    end
+})
+
+COB("World", {
+    Name = "HypixelFLY",
+    HoverText = "EEEEEEEEEEEEEEEEEEEEEEEEEEEE FLY",
+    Function = function(v)
+        longjumpval = v
+        if longjumpval then
+            workspace.Gravity = 55
+            spawn(function()
+                repeat
+                    if (not longjumpval) then return end
+                    lplr.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Freefall)
+                    wait(0.000000000000001)
+                    lplr.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Running)
+                    wait(0.000000000000001)
+                    lplr.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Climbing)
+                    wait(0.000000000000001)
+                    lplr.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Swimming)
+                    wait(0.000000000000001)
+                    lplr.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+                    wait(0.000000000000001)
+                    lplr.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Landed)
+                    wait(0.000000000000001)
+                    lplr.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Freefall)
+                    wait(0.000000000000001)
+                    lplr.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Landed)
+                    wait(0.000000000000001)
+                    lplr.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Freefall)
+                    wait(0.000000000000001)
+                    lplr.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Freefall)
+                    wait(0.000000000000001)
+                    lplr.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Landed)
+                    wait(0.000000000000001)
+                    lplr.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Swimming)
+                    wait(0.000000000000001)
+                    lplr.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Swimming)
+                    wait(0.000000000000001)
+                    lplr.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Landed)
+                    wait(0.000000000000001)
+                    lplr.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Freefall)
+                    wait(0.000000000000001)
+                    lplr.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Landed)
+                    wait(0.000000000000001)
+                    lplr.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Running)
+                    wait(0.000000000000001)
+                    lplr.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Running)
+                    wait(0.000000000000001)
+                    lplr.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Landed)
+                    wait(0.000000000000001)
+                    lplr.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Swimming)
+                    wait(0.000000000000001)
+                    lplr.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Swimming)
+                    wait(0.000000000000001)
+                    lplr.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Running)
+                    wait(0.000000000000001)
+                    lplr.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Landed)
+                    wait(0.000000000000001)
+                until (not longjumpval)
+            end)
+        else
+            workspace.Gravity = 196.19999694824
+            return
+        end
+    end
+    })
