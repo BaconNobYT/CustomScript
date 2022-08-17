@@ -1,0 +1,32 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("LoaxmWore", "Ocean")
+local Tab = Window:NewTab("Combat")
+local Section = Tab:NewSection("Speed")
+Section:NewSlider("SPEED", "xdxd", 50, 0, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+Section:NewSlider("Gravity", "xdxd", 300, 0, function(s)
+            workspace.Gravity = s
+end)
+Section:NewKeybind("KEYBIND", "KeybindInfo", Enum.KeyCode.F, function()
+	Library:ToggleUI()
+end)
+Section:NewButton("NoRoot", "BEST AC BYPASS", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cesare0328/my-scripts/main/joke%20anticheat.lua'),true))()
+end)
+
+Section:NewToggle("InfJUMP", "EZ JUMP", function(state)
+    if state then
+        toggled = true
+        game:GetService("UserInputService").jumpRequest:Connect(function()
+            if toggled == true then
+                wait(jumpdelay)
+                game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass"Humanoid":ChangeState("Jumping")
+                wait(0.0000003)
+                game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass"Humanoid":ChangeState("freefall")						
+            end
+        end)
+    else
+        toggled = false
+    end
+end)
